@@ -1,0 +1,405 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+
+
+
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog Visual de Contaminación</title>
+<style>
+/* --- Estilos Generales --- */
+body {
+    /* Reemplaza con la URL de tu imagen de fondo (ej: 'sunny-sky.jpg') */
+    background-image: url('CONTAMINACION3.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    color: #444;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f5f5f5; /* Fondo suave */
+}
+
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.floating-card {
+    background-color: #ffffff;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 10px; /* Bordes suaves */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    /* Animación ligera de "flotar" aplicada a las tarjetas */
+    animation: float 3s ease-in-out infinite;
+}
+
+/* KEYFRAMES para la animación de flotar (general) */
+@keyframes float {
+    0% { transform: translateY(0px); }
+50% { transform: translateY(-5px); }
+100% { transform: translateY(0px); }
+}
+
+h1 {
+    color: #ff5722; /* Naranja vibrante */
+    /* Se quita text-align: center; para que marquee funcione */
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+h2 {
+    color: #ff9800; /* Naranja más claro */
+    margin-top: 0;
+    border-bottom: 2px dashed #ff9800;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+p {
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+/* --- Estilo de Imagen con Texto en Movimiento (Banner) --- */
+.dynamic-banner {
+    position: relative;
+    overflow: hidden;
+    height: 250px;
+    margin: 30px 0;
+    border-radius: 10px;
+}
+
+.dynamic-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* ANIMACIÓN AGREGADA: para que la imagen se mueva de derecha a izquierda rápidamente al cargar */
+    animation: slideFromRight 1s ease-out forwards;
+}
+
+/* KEYFRAMES AGREGADOS: Define cómo se mueve la imagen */
+@keyframes slideFromRight {
+    0% { transform: translateX(100%); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
+.dynamic-banner .text-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 87, 34, 0.8); /* Naranja/Rojo semi-transparente */
+    color: white;
+    font-size: 1.8em;
+    font-weight: bold;
+    text-align: center;
+    /* Animación de entrada con rebote */
+    animation: bounceIn 1s ease-out forwards;
+}
+
+@keyframes bounceIn {
+    0% { transform: scale(0.5); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* --- Estilos de Video y Mapa --- */
+.media-asset {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    display: block;
+    border: 2px solid #ff5722; /* Borde de acento naranja */
+    /* Asegura que el video también use estos estilos */
+}
+
+/* NUEVO ESTILO para el elemento de video */
+.video-asset {
+    width: 100%;
+    max-height: 400px;
+    border-radius: 8px;
+    /* Las propiedades de borde y sombra ya están en .media-asset */
+}
+
+
+.caption {
+    font-size: 0.9em;
+    color: #757575;
+    margin-top: 10px;
+    text-align: center;
+    font-style: italic;
+}
+
+/* ESTILO MODIFICADO: Duración de la animación cambiada a 1s */
+.pulse-map {
+    animation: pulse-attention 1s infinite ease-in-out;
+}
+
+/* KEYFRAMES para la animación de pulso */
+@keyframes pulse-attention {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        /* Se agranda un 2% */
+        transform: scale(1.02);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+</style>
+</head>
+<body>
+<div class="container">
+    <!-- MODIFICACIÓN APLICADA: Título dentro de <marquee> con velocidad (scrollamount="10") -->
+    <marquee direction="left" scrollamount="10">
+        <h1>¡Alerta Ambiental! Cuidemos el Planeta</h1>
+    </marquee>
+
+    <!-- Párrafo 1 (6 líneas) -->
+    <div class="floating-card">
+        <h2>¿Qué está pasando?</h2>
+        <p> La contaminación ambiental representa uno de los desafíos más apremiantes de nuestro siglo, afectando a ecosistemas y a la salud humana de maneras profundas e irreversibles. La emisión constante de gases de efecto invernadero, vertidos industriales y la gestión inadecuada de residuos plásticos han alterado el equilibrio natural del planeta. Este fenómeno no solo compromete la biodiversidad global, sino que también exacerba crisis climáticas como sequías, inundaciones y tormentas más intensas. La urgencia de implementar soluciones sostenibles es palpable y requiere una acción concertada a nivel mundial. Cada día que pasa sin medidas efectivas, el costo de la inacción aumenta exponencialmente. La responsabilidad recae tanto en los gobiernos como en los ciudadanos. </p>
+    </div>
+
+    <!-- Imagen con Texto en Movimiento (Banner de Ancho Completo) -->
+    <div class="dynamic-banner">
+        <!-- Reemplaza con la URL de una imagen relevante (ej: 'smoke-city.jpg') -->
+        <img src="CONTAMINACION.jpg" alt="Imagen representativa de la contaminación industrial">
+        <div class="text-overlay"> No podemos seguir posponiendo la responsabilidad; la naturaleza te necesita hoy. Cada día que pasa sin acción climática es un día que le robamos a las generaciones futuras y a la biodiversidad que nos sustenta. </div>
+    </div>
+
+    <!-- Párrafo 2 (6 líneas) -->
+    <div class="floating-card">
+        <h2>¿Cómo nos afecta?</h2>
+        <p> Diversos estudios científicos han documentado la correlación directa entre los niveles elevados de contaminantes atmosféricos y el incremento de enfermedades respiratorias y cardiovasculares en centros urbanos densamente poblados. La calidad del aire se ha convertido en un indicador crítico de salud pública, llevando a muchas ciudades a emitir alertas diarias. Además, la contaminación del agua potable con metales pesados y microplásticos plantea riesgos carcinogénicos a largo plazo para millones de personas. Es imperativo mejorar los sistemas de monitoreo y purificación y regular estrictamente las fuentes de vertidos industriales. La transparencia en la información sobre la calidad ambiental es fundamental para empoderar a las comunidades. Solo a través de la educación y la conciencia pública podremos mitigar estos impactos adversos y construir un futuro más saludable. </p>
+    </div>
+
+    <!-- SECCIÓN DE VIDEO (Reemplaza al GIF animado) -->
+    <div class="floating-card">
+        <h2>ESTO QUIERES?</h2>
+        <!-- Elemento de video HTML5. Asegúrate de tener el archivo MP4. -->
+        <!-- 'autoplay loop muted playsinline' son atributos clave para que se comporte como un GIF -->
+        <video class="video-asset" controls autoplay loop muted playsinline>
+            <source src="contaminacionvideo2.mp4" type="video/mp4">
+            <!-- Texto o imagen alternativa si el navegador no soporta el video -->
+            Tu navegador no soporta el elemento de video.
+            <!-- Puedes dejar el GIF original como fallback si lo prefieres -->
+            <!-- <img src="CONTAMINACIONNN.GIF" alt="GIF animado sobre contaminación o soluciones" class="media-asset"> -->
+        </video>
+        <p class="caption"><em>si el planeta cae.caemos con el</em></p>
+    </div>
+    <!-- FIN SECCIÓN DE VIDEO -->
+
+    <!-- Párrafo 3 (6 líneas) -->
+    <div class="floating-card">
+        <h2>¿Qué podemos hacer?</h2>
+        <p> Las iniciativas de mitigación deben centrarse en la transición hacia fuentes de energía renovable, como la solar y la eólica, y en la promoción de una economía circular que minimice la generación de residuos. La innovación tecnológica ofrece herramientas prometedoras, incluyendo métodos avanzados de reciclaje y captura de carbono. Sin embargo, el éxito de estas medidas depende de la cooperación internacional y de marcos legales robustos que incentiven la sostenibilidad y penalicen las prácticas nocivas. Organizaciones no gubernamentales y activistas juegan un papel vital al presionar por un cambio real y duradero. La lucha contra la contaminación es una maratón, no un sprint, y requiere un compromiso sostenido a lo largo de las décadas venideras. La esperanza reside en la capacidad de la humanidad para adaptarse y priorizar la salud del planeta sobre los intereses económicos cortoplacistas. </p>
+    </div>
+
+    <!-- Mapa (Imagen Estática) - MODIFICADO CON LA CLASE pulse-map -->
+    <div class="floating-card">
+        <h2>EMPEZEMOS POR NUESTRO PAIS</h2>
+        <!-- Se agregó la clase pulse-map -->
+		<a href="https://www.parquesalegres.org">
+        <img src="MEXICO.JPG" alt="Mapa estático de distribución de puntos calientes de contaminación" class="media-asset pulse-map">
+        <p class="caption"><em>Un mapa de esperanza para un futuro mas limpio.</em></p><a>
+    </div>
+</div>
+</body>
+</html>
+
+
+<HTML>
+<HEAD>
+<TITLE>EJEMPLO 23</TITLE>
+<STYLE>
+  /* Estilos para asegurar que no haya nada transparente */
+  body {
+    background-color: #FFFFFF; /* Fondo blanco para el cuerpo */
+    color: #000000; /* Texto negro por defecto */
+    font-family: sans-serif;
+  }
+  table {
+    background-color: #F0F0F0; /* Un gris claro para el fondo de la tabla */
+    border: 1px solid #000000;
+    border-collapse: collapse;
+    width: 50%; /* Ancho de la tabla */
+    margin: 20px auto; /* Centrar la tabla en la página */
+  }
+  th, td {
+    padding: 10px;
+    border: 1px solid #000000;
+    text-align: left;
+  }
+  h1 {
+      color: #000000; /* Asegurar que el título sea visible */
+  }
+</STYLE>
+</HEAD>
+<BODY>
+<H1 ALIGN=CENTER>PUEDE DONAR PARA EL MEDIO AMBIENTE!</H1>
+
+<html><head><title>Ej22</title></head><body>
+<h1 align=center>Ficha de datos</h1>
+<FORM ACTION="mailto: elprofediaz@hotmail.com" METHOD="post" ENCTYPE="Text"/plain>
+Nombre:
+<Input type="Text" Name="Nombre" MaxLenght=15><p>
+
+Primer apellido:
+<Input type="Text" Name="Primer Apellido" MaxLenght=15><p>
+
+Segundo apellido:
+<Input type="Text" Name="Segundo Apellido" MaxLenght=15><p>
+
+Domicilio:
+<Input type="Text" Name="Domicilio" size=40 MaxLenght=30><p>
+
+
+
+
+
+
+<!-- Se recomienda usar un script de backend en lugar de MAILTO para formularios reales -->
+<FORM ACTION="MAILTO:ELPROFEDIAZ@HOTMAIL.COM" METHOD="POST" ENCTYPE="text/plain">
+  <table>
+    <tr>
+      <th colspan="2">Opciones de Donación</th>
+    </tr>
+    <tr>
+      <td>CON QUE BANCO DESEA HACER LA DONACION:</td>
+      <td>
+        <SELECT NAME="ENTRADA" SIZE=1>
+          <OPTION VALUE="NINGUNA">BANCO BVV</OPTION>
+          <OPTION VALUE="CEBICHE">BANCO DEL BIENESTAR</OPTION>
+          <OPTION VALUE="OCOPA">BANCO AZTECA</OPTION>
+          <OPTION VALUE="LECHE DE TIGRE">BANAMEX</OPTION>
+          <OPTION VALUE="PAPA A LA HUANCAINA">FIRST CASH</OPTION>
+          <OPTION VALUE="SOPA DEL DIA">SANTANDER</OPTION>
+        </SELECT>
+      </td>
+    </tr>
+    <tr>
+      <td>CON QUE MONEDA DESEA DONAR:</td>
+      <td>
+        <SELECT NAME="SEGUNDO" SIZE=4 MULTIPLE>
+          <OPTION VALUE="NINGUNA">dolar</OPTION>
+          <OPTION VALUE="ADOBO DE SANCHO">peso</OPTION>
+          <OPTION VALUE="ARRROZ CHAFA">euro</OPTION>
+          <OPTION VALUE="ARROZ CON PATO">yenes</OPTION>
+          <OPTION VALUE="BISTEC CON PAPAS">rublo</OPTION>
+          <OPTION VALUE="CHICHARON DE PESCADO">Dólar hongkonés</OPTION>
+          <OPTION VALUE="LOMO SALADO">boliviano</OPTION>
+          <OPTION VALUE="TALLARIN SALTADO">ns</OPTION>
+        </SELECT>
+      </td>
+    </tr>
+    <tr>
+      <td>CUANTO DESEA DONAR:</td>
+      <td>
+        <SELECT NAME="REFRESCO" SIZE=1>
+          <OPTION VALUE="NINGUNA">100</OPTION>
+          <OPTION VALUE="INKA KOLA">500</OPTION>
+          <OPTION VALUE="MANSANILLA">1000</OPTION>
+          <OPTION VALUE="REFRESCO PIÑA">2000</OPTION>
+          <OPTION VALUE="REFRESCO TAMARINDO">5000</OPTION>
+        </SELECT>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2" style="text-align: center;">
+       
+      </td>
+    </tr>
+  </table>
+</FORM>
+
+</BODY>
+</HTML>
+
+
+
+
+<html>
+<head>
+<title>EJ24</title>
+<style>
+  /* Estilos para asegurar un fondo opaco */
+  body {
+    background-color: #FFFFFF; /* Fondo blanco */
+    color: #000000;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 20px;
+  }
+  table {
+    background-color: #F0F0F0; /* Fondo gris claro para la tabla */
+    border: 1px solid #000000;
+    border-collapse: collapse;
+    width: 60%;
+    margin: 20px auto; /* Centrar la tabla */
+  }
+  th, td {
+    padding: 15px;
+    border: 1px solid #000000;
+    text-align: left;
+  }
+  textarea {
+    /* Asegurar que el área de texto también tenga un fondo opaco */
+    background-color: #FFFFFF;
+    border: 1px solid #000000;
+    width: 95%;
+    padding: 5px;
+  }
+  h1 {
+      color: #000000;
+  }
+</style>
+</head>
+<body>
+
+
+<!-- Se recomienda usar un script de backend en lugar de MAILTO para formularios reales -->
+<FORM ACTION="mailto:elprofediaz@hotmail.com" METHOD="post" ENCTYPE="Text/Plain">
+  <table>
+    <tr>
+      <th>Tu Opinión Importa</th>
+    </tr>
+    <tr>
+      <td>
+        MI OPINION CON RESPECTO A LA CONTAMINACION ES:
+        <p>
+        <TEXTAREA Name="opinion" cols=30 rows=5>
+        NO OLVIDES FIRMAR TU COMENTARIO.
+        </TEXTAREA>
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align: center;">
+        <INPUT Type="Submit" Value="Enviar datos">
+        <!-- Corregido el atributo 'Values' por 'Value' -->
+        <INPUT Type="Reset" Value="Borrar datos">
+      </td>
+    </tr>
+  </table>
+</FORM>
+
+</body>
+</html>
